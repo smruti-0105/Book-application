@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshop</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Bookshop Application</h1>
+            <nav>
+                <button onclick="showLoginForm()">Login</button>
+                <button onclick="showRegisterForm()">Register</button>
+            </nav>
+        </header>
+
+        <!-- Search Section -->
+        <section id="search-section">
+            <h2>Search for Books</h2>
+            <input type="text" id="search-input" placeholder="Search by ISBN, author, or title">
+            <button onclick="searchBooks()">Search</button>
+            <ul id="book-list"></ul>
+        </section>
+
+        <!-- Book Details Section -->
+        <section id="book-details" class="hidden">
+            <h2>Book Details</h2>
+            <div id="book-info"></div>
+            <div id="reviews-section">
+                <h3>Reviews</h3>
+                <ul id="reviews-list"></ul>
+                <textarea id="new-review" placeholder="Write a review..."></textarea>
+                <button onclick="addReview()">Add Review</button>
+            </div>
+        </section>
+
+        <!-- User Registration Form -->
+        <section id="register-form" class="hidden">
+            <h2>Register</h2>
+            <input type="text" id="register-username" placeholder="Username">
+            <input type="password" id="register-password" placeholder="Password">
+            <button onclick="registerUser()">Register</button>
+            <button onclick="hideRegisterForm()">Cancel</button>
+        </section>
+
+        <!-- User Login Form -->
+        <section id="login-form" class="hidden">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="loginUser()">Login</button>
+            <button onclick="hideLoginForm()">Cancel</button>
+        </section>
+
+        <!-- Logout Button -->
+        <button id="logout-button" class="hidden" onclick="logoutUser()">Logout</button>
+    </div>
+
+    <script src="book.js"></script>
+</body>
+</html>
